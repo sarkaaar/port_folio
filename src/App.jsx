@@ -1,14 +1,31 @@
 import Header from "./components/Header";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import Projects from "./components/Projects";
 import ContactUs from "./components/ContactUs";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 // import "./App.css";
 
 function App() {
   return (
-    <div>
+    <>
+
       <Header />
-      <ContactUs />
-      <hr className="bg-grey-800 mb-2 w-10/12 lg:flex max-w-7xl m-auto" />
-    </div>
+      <div>
+        <About />
+        <div className="bg-gray-500">
+          <Projects />
+          <Skills />
+          <Experience />
+        </div>
+        <ContactUs />
+
+      </div>
+
+      {/* </div> */}
+      <Footer />
+    </>
   );
 }
 

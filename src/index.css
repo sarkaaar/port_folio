@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Ubuntu', sans-serif;
   /* font-size: 16px;
   line-height: 24px;*/
   /* font-weight: 800;  */
 
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
 
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@
   -webkit-text-size-adjust: 100%; */
 }
 
-#root {
+body {
   height: 100vh;
   background-color: rgb(51 65 85);
 }
