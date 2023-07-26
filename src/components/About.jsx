@@ -3,7 +3,7 @@ import image from "../assets/image.png";
 export default function About() {
   return (
 
-    <div className="flex justify-center h-screen">
+    <div className="flex justify-center h-screen bg-slate-800">
       {/* <div className=""> */}
         <div className="flex justify-center items-center">
           <div className=" lg:flex max-w-7xl">

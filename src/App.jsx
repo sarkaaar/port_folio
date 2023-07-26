@@ -14,7 +14,7 @@ function App() {
       <Header />
       <div>
         <About />
-        <div className="bg-gray-500">
+        <div className="bg-slate-700">
           <Projects />
           <Skills />
           <Experience />
