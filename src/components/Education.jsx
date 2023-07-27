@@ -18,7 +18,7 @@ export default function Education() {
 
     return (
         <div className="flex justify-center mt-16">
-            <div className=" max-w-7xl w-full">
+            <div className=" max-w-7xl w-10/12">
                 <h2 className="py-4 font-bold text-3xl text-gray-100">Education</h2>
                 <div className="">
                     <div className="flex flex-col gap-8">

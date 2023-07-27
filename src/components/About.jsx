@@ -6,7 +6,7 @@ export default function About() {
     <div className="flex justify-center h-screen bg-slate-800">
       {/* <div className=""> */}
         <div className="flex justify-center items-center">
-          <div className=" lg:flex max-w-7xl">
+          <div className=" lg:flex max-w-7xl w-10/12">
             <div className="m-auto">
               <h1 className="text-8xl font-bold">Abdul Wali</h1>
               <h1 className="text-3xl text-gray-300 mb-4">Software Engineer</h1>
