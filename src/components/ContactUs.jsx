@@ -25,9 +25,9 @@ export default function ContactUs() {
               }}
             />
           </div>
-          <div className="flex">
+          <div className="lg:flex">
             <div className="w-1/2"></div>
-            <div className="w-1/2 bg-slate-900 rounded-lg p-8">
+            <div className="lg:w-1/2 bg-slate-900 rounded-lg p-8">
               <div className="mx-auto max-w-2xl text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Let's build Together.

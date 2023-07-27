@@ -25,7 +25,7 @@ export default function Education() {
                         {experience.map((exp, index) => {
                             return (<div className="hover:bg-slate-600 border-r border-t p-4 rounded-lg">
                                 <h2 className="text-2xl font-bold">{exp.comp}</h2>
-                                <div className="flex">
+                                <div className="sm:flex">
                                     <h3 className="text-lg font-bold text-gray-300 pl-4">{exp.desg}</h3>
                                     <h3 className="text-md mt-1 text-gray-300 pl-4">{exp.time}</h3>
                                 </div>

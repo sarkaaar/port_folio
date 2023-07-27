@@ -3,13 +3,13 @@ import image from "../assets/image.png";
 export default function About() {
   return (
 
-    <div className="flex justify-center h-screen bg-slate-800">
+    <div className="flex justify-center h-full pb-12 sm:h-screen bg-slate-800">
       {/* <div className=""> */}
         <div className="flex justify-center items-center">
           <div className=" lg:flex max-w-7xl w-10/12">
-            <div className="m-auto">
-              <h1 className="text-8xl font-bold">Abdul Wali</h1>
-              <h1 className="text-3xl text-gray-300 mb-4">Software Engineer</h1>
+            <div className="m-auto pt-12 sm:pt-0">
+              <h1 className="text-3xl sm:text-8xl font-bold">Abdul Wali</h1>
+              <h1 className="text-2xl sm:text-3xl text-gray-300 mb-4">Software Engineer</h1>
               <div>
                 <p className="text-gray-100 mb-2 italic">
                   "Hi there, I'm a web developer. I love building and rebuilding
