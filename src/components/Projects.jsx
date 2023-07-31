@@ -66,8 +66,8 @@ export default function Projects() {
           {/* <div className="flex gap-4 items-center flex-col sm:flex-row sm:justify-center"> */}
           <div className="flex justify-center">
             <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
-              {projects.map((project) => (
-                <div className=" my-4 border-gray-600 border shadow-sm bg-gray-600  hover:shadow-2xl w-10/12 sm:w-72 m-auto rounded-lg">
+              {projects.map((project, index) => (
+                <div key={index} className=" my-4 border-gray-600 border shadow-sm bg-gray-600  hover:shadow-2xl w-10/12 sm:w-72 m-auto rounded-lg">
                   <img
                     src={project?.image}
                     className=" h-48 w-full rounded-t-lg overflow-auto"

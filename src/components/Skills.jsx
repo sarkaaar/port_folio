@@ -8,7 +8,7 @@ export default function Skills() {
                     <div className="flex justify-center">
                         <div className="justify-center sm:w-11/12 grid grid-cols-2 sm:grid-cols-4 sm:justify-center md:grid-cols-6 lg:grid-cols-8 gap-4">
                             {skills.map((obj, index) => {
-                                return (<h3 className="flex justify-center bg-gray-600 p-4 rounded-full hover:bg-gray-500">{obj}</h3>)
+                                return (<h3 key={index} className="flex justify-center bg-gray-600 p-4 rounded-full hover:bg-gray-500">{obj}</h3>)
                             })}
                         </div>
                     </div>

@@ -24,6 +24,13 @@ body {
   background-color: rgb(51 65 85);
 }
 
+h2 {
+  color: rgb(226 232 240);
+}
+
+p {
+  color: rgb(148 163 184);
+}
 /* a {
   font-weight: 500;
   color: #646cff;
