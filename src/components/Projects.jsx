@@ -1,28 +1,32 @@
 import { render } from "react-dom";
 import Modal from "./Modal";
+import store from "../assets/projects/E-Commerce.png"
+import cam from "../assets/projects/open_cv.jpg"
+import chat from "../assets/projects/connectX.jpeg"
+import db from "../assets/projects/database.jpeg"
 
 export default function Projects() {
   const projects = [
     {
-      image: "src/assets/projects/E-Commerce.png",
+      image: store,
       name: "An E-Commerce Store",
       description:
         "A Full Fleged E-Commerce Store That has all the Roles on a single page, i.e. Different roles have different usages onto their Permitter Features and etc and well as some o thee clinical services were also there such as an appointment with a doctor as well as a life check up and payment methods and their ratings and etc",
     },
     {
-      image: "src/assets/projects/open_cv.jpg",
+      image: cam,
       name: "Survillance Systems Using OPEN_CV",
       description:
         "An application in Python that uses a simple camera to identify the intruder into the frame, it stores all the images at once in the begining of the excecuetion of the known faces and then matches that with th e face on the current frame and when an unknown person enters the frame the system captures the images of that intruder and will save in the local Storage",
     },
     {
-      image: "src/assets/projects/connectX.jpeg",
+      image: chat,
       name: "Messaging App (Connect X) ",
       description:
         "An interactive text messaging application in react native",
     },
     {
-      image: "src/assets/projects/database.jpeg",
+      image: db,
       name: "Course Registeration System ",
       description:
         "It is just a database wthout any frontend. It is capable enough that can handle a 1000+ students in different standards as well as is able to manage the pre-requirite sourses and etc",
