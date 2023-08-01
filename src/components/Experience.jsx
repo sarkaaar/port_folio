@@ -16,13 +16,14 @@ export default function Experience() {
 
   return (
     <section id="experience" className="flex justify-center pt-16">
-      <div className=" max-w-7xl w-10/12">
-        <h2 className="py-4 font-bold text-3xl text-gray-100">Experience</h2>
+      <div className=" max-w-7xl w-10/12 sm:flex sm:gap-8" >
+        <h2 className="py-4 font-bold text-3xl text-gray-100 w-1/5">Experience</h2>
+        <hr className=" h-full border-l border-slate-400 " />
         <div className="">
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-8">
             {experience.map((exp, index) => {
               return (
-                <div key={index} className="hover:bg-slate-600 even:border-r odd:border-l border-y p-4 rounded-xl border-slate-500">
+                <div key={index} className="hover:shadow-xl bg-slate-700 border-r border-slate-500 border-t p-4 rounded-lg">
                   <h2 className="text-2xl font-bold">{exp.comp}</h2>
                   <div className="sm:flex">
                     <h3 className="text-lg font-bold text-gray-300 pl-4">

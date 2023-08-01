@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Switch } from "@headlessui/react";
+// import { useForm } from "react-hook-form";
+import { useForm, ValidationError } from '@formspree/react';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function ContactUs() {
-  const [agreed, setAgreed] = useState(false);
+  const [state, handleSubmit] = useForm("xrgweqdo");
 
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <section id="contactUs" className="bg-slate-800 flex justify-center">
       <div className="max-w-7xl w-full">
@@ -28,11 +32,11 @@ export default function ContactUs() {
           <div className="lg:flex">
             <div className="w-1/2">
               <div className="flex justify-center items-center">
-                <div className="w-10/12 pt-64">
-                  <h1 className="text-8xl">Wanna</h1>
-                  <h1 className="text-8xl">make</h1>
-                  <h1 className="text-8xl">Something</h1>
-                  <h1 className="text-8xl animate-pulse font-bold text-slate-600">Incredible.</h1>
+                <div className="w-10/12 lg:pt-64 text-6xl sm:text-8xl pb-8">
+                  <h1 className="">Wanna</h1>
+                  <h1 className="">make</h1>
+                  <h1 className="">Something</h1>
+                  <h1 className="animate-pulse font-bold text-slate-600">Incredible.</h1>
                 </div>
               </div>
             </div>
@@ -46,33 +50,31 @@ export default function ContactUs() {
                   a question, or just want to connect.{" "}
                 </p>
               </div>
-              <form
-                action="#"
-                method="POST"
+              <form onSubmit={handleSubmit}
                 className="mx-auto mt-16 max-w-xl sm:mt-20"
               >
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="first-name"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="block text-sm font-semibold leading-6"
                     >
-                      Name
+                      Username
                     </label>
                     <div className="mt-2.5">
                       <input
                         type="text"
-                        name="first-name"
-                        id="first-name"
+                        name="username"
+                        id="username"
                         autoComplete="given-name"
-                        className="block w-full bg-slate-800 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                        className="block w-full text-white  bg-slate-800 rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="block text-sm font-semibold leading-6"
                     >
                       Email
                     </label>
@@ -82,24 +84,23 @@ export default function ContactUs() {
                         name="email"
                         id="email"
                         autoComplete="email"
-                        className="block w-full bg-slate-800 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                        className="block w-full bg-slate-800 rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
                   <div className="sm:col-span-2">
                     <label
-                      htmlFor="email"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      htmlFor="subject"
+                      className="block text-sm font-semibold leading-6 "
                     >
                       Subject
                     </label>
                     <div className="mt-2.5">
                       <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        autoComplete="email"
-                        className="block w-full bg-slate-800 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        className="block w-full bg-slate-800 rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
@@ -107,7 +108,7 @@ export default function ContactUs() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="message"
-                      className="block text-sm font-semibold leading-6 text-gray-900"
+                      className="block text-sm font-semibold leading-6 "
                     >
                       Message
                     </label>
@@ -116,39 +117,11 @@ export default function ContactUs() {
                         name="message"
                         id="message"
                         rows={4}
-                        className="block w-full bg-slate-800 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                        className="block w-full bg-slate-800 rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
                         defaultValue={""}
                       />
                     </div>
                   </div>
-                  <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-                    <div className="flex h-6 items-center">
-                      <Switch
-                        checked={agreed}
-                        onChange={setAgreed}
-                        className={classNames(
-                          agreed ? "bg-slate-600" : "bg-gray-200",
-                          "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        )}
-                      >
-                        <span className="sr-only">Agree to policies</span>
-                        <span
-                          aria-hidden="true"
-                          className={classNames(
-                            agreed ? "translate-x-3.5" : "translate-x-0",
-                            "h-4 w-4 transform rounded-full shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
-                          )}
-                        />
-                      </Switch>
-                    </div>
-                    <Switch.Label className="text-sm leading-6 text-gray-600">
-                      By selecting this, you agree to our{" "}
-                      <a href="#" className="font-semibold text-indigo-600">
-                        privacy&nbsp;policy
-                      </a>
-                      .
-                    </Switch.Label>
-                  </Switch.Group>
                 </div>
                 <div className="mt-10">
                   <button

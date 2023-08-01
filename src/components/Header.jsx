@@ -36,11 +36,10 @@ export default function Header() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
+                  <svg width="55" height="32" viewBox="0 0 930 552" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M260.632 101L424 400L530 161L692 400L834 54L930 0L716 552L546 296L424 552L265 251L143 475H341L388 552H0L260.632 101Z" fill="#D9D9D9" />
+                  </svg>
+
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
