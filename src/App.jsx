@@ -17,6 +17,7 @@ function App() {
         <About />
         <div className="bg-slate-700 pb-16">
           <Projects />
+
           <Experience />
           <Skills />
           <Education />
