@@ -32,7 +32,7 @@ export default function ContactUs() {
           <div className="lg:flex">
             <div className="w-1/2">
               <div className="flex justify-center items-center">
-                <div className="w-10/12 lg:pt-64 text-6xl sm:text-8xl pb-8">
+                <div className="w-10/12 lg:pt-48 text-6xl sm:text-8xl pb-8">
                   <h1 className="">Wanna</h1>
                   <h1 className="">make</h1>
                   <h1 className="">Something</h1>
@@ -42,10 +42,8 @@ export default function ContactUs() {
             </div>
             <div className="lg:w-1/2 bg-slate-900 rounded-lg p-8">
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Let's build Together.
-                </h2>
-                <p className="mt-2 text-lg leading-8 text-gray-600">
+                
+                <p className="mt-2 text-lg leading-8">
                   Feel free to reach out if you're looking for a developer, have
                   a question, or just want to connect.{" "}
                 </p>
