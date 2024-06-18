@@ -2,8 +2,14 @@ export default function Experience() {
   const experience = [
     {
       comp: "I2C Inc.",
+      desg: "Software Software Engineer - WEB",
+      time: "(July 2023 - Presant)",
+      disc: "Worked in managing and fixes issues in the web applications.",
+    },
+    {
+      comp: "I2C Inc.",
       desg: "Associate Software Engineer - WEB",
-      time: "(July 2022 - Presant)",
+      time: "(July 2022 - June 2023)",
       disc: "Have Experience in a product based company where I worked in securing its web applications",
     },
     {
