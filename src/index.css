@@ -17,11 +17,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%; */
+  scroll-behavior: smooth;
 }
 
 body {
   height: 100vh;
   background-color: rgb(51 65 85);
+  
 }
 
 h1 {

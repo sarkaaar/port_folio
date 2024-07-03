@@ -5,6 +5,8 @@ import chat from "../assets/projects/connectX.jpeg";
 import db from "../assets/projects/database.jpeg";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import Tilt from "react-parallax-tilt";
+
 
 const projects = [
   {
@@ -58,6 +60,7 @@ export default function Projects() {
           <div className="flex justify-center">
             <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
               {projects.map((project, index) => (
+                <Tilt>
                 <div
                   key={index}
                   onClick={() => openModal(project)}
@@ -71,7 +74,7 @@ export default function Projects() {
                     <h3 className="font-bold text-lg text-gray-200 h-16 overflow-y-hidden ">
                       {project?.name}
                     </h3>
-                    <h4 className="text-gray-300 text-sm">
+                    <h4 className="text-gray-300 text-sm h-14">
                       {project?.description.slice(0, 70) + "..."}
                       <span
                         className="font-bold text-sm hover:text-indigo-600"
@@ -84,6 +87,7 @@ export default function Projects() {
                     </h4>
                   </div>
                 </div>
+                </Tilt>
               ))}
             </div>
           </div>

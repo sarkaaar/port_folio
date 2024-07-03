@@ -13,7 +13,7 @@ function App() {
     <>
 
       <Header />
-      <div>
+      <div className="scroll-smooth">
         <About />
         <div className="bg-slate-700 pb-16">
           <Projects />

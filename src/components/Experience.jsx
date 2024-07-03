@@ -29,7 +29,7 @@ export default function Experience() {
           <div className="flex flex-col gap-8">
             {experience.map((exp, index) => {
               return (
-                <div key={index} className="hover:bg-slate-800 border-r border-slate-500 border-t p-4 rounded-lg sm:w-full">
+                <div key={index} className="hover:shadow-lg  border-r border-slate-500 border-t p-4 rounded-lg sm:w-full">
                   <h2 className="text-2xl font-bold">{exp.comp}</h2>
                   <div className="sm:flex">
                     <h3 className="text-lg font-bold text-gray-300 pl-4">
